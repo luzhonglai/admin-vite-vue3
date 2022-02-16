@@ -1,0 +1,9 @@
+
+
+
+export {
+  API_BASE_URL,
+  API_TARGET_URL,
+  MOCK_API_BASE_URL,
+  MOCK_API_TARGET_URL,
+}
