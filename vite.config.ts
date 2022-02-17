@@ -1,10 +1,12 @@
-import { defineConfig, preview } from 'vite'
-import vue from '@vitejs/plugin-vue'
 import path from 'path'
+import { defineConfig, preview } from 'vite'
+import { vitePlugins } from './src/config/vite-plugins'
+
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: vitePlugins(false),
   resolve:{
     css:{
       preprocessorOptions:{
@@ -22,7 +24,6 @@ export default defineConfig({
       '@api': path.resolve(__dirname, './src/api'),
     }
   },
-
   server:{
     hmr: { overlay: false }, // 禁用或配置 HMR 连接 设置 server.hmr.overlay 为 false 可以禁用服务器错误遮罩层
     port: 4000, // 类型： number 指定服务器端口;
