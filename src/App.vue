@@ -7,54 +7,48 @@
  * @FilePath: /admin-vite/src/App.vue
 -->
 <script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-import { getCurrentInstance, onMounted  } from 'vue'
+import { getCurrentInstance, onMounted } from "vue";
 const {
-  proxy: { $echarts }
-}: any = getCurrentInstance() 
-console.log("🚀 ~ file: App.vue ~ line 15 ~ getCurrentInstance", getCurrentInstance())
+  proxy: { $echarts },
+}: any = getCurrentInstance();
+console.log(
+  "🚀 ~ file: App.vue ~ line 15 ~ getCurrentInstance",
+  getCurrentInstance()
+);
 import { userStore } from "@/pinia/user";
 
-console.log("🚀 ~ file: App.vue ~ line 21 ~ $echarts", $echarts)
+console.log("🚀 ~ file: App.vue ~ line 21 ~ $echarts", $echarts);
 const mainStore = userStore();
-console.log("🚀 ~ file: App.vue ~ line 8 ~ mainStore", mainStore.count)
+console.log("🚀 ~ file: App.vue ~ line 8 ~ mainStore", mainStore.count);
 
 const myEcharts = () => {
-  const mycharts = $echarts.init(document.getElementById('box'))
+  const mycharts = $echarts.init(document.getElementById("box"));
   const options = {
     xAxis: {
-      type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      type: "category",
+      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     },
     yAxis: {
-      type: 'value'
+      type: "value",
     },
     series: [
       {
         data: [150, 230, 224, 218, 135, 147, 260],
-        type: 'line'
-      }
-    ]
-  }
-  mycharts.setOption(options)
-}
+        type: "line",
+      },
+    ],
+  };
+  mycharts.setOption(options);
+};
 onMounted(() => {
-  myEcharts()
-}),
+  myEcharts();
+});
 //  patch 直接修改state
-mainStore.$patch({
-  count:'222'
-})
-
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite"></HelloWorld>
   <!-- 测试taiwindcss 插件 -->
-  <div class="flex w-36 h-36 m-auto items-center">欢迎学习vue3 script setup pinia</div>
-  <div @click="mainStore.setCount">{{mainStore.count}}</div>
-  <div id="box" style="width:600px;height:600px"></div>
+  <div id="box" style="width: 100%; height: 600px"></div>
 </template>
 
 <style>
