@@ -1,8 +1,9 @@
+import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer';
 /*
  * @Author: luzhonglai
  * @Date: 2022-02-17 22:53:46
  * @LastEditors: luzhonglai
- * @LastEditTime: 2022-02-20 01:12:09
+ * @LastEditTime: 2022-02-20 03:08:41
  * @FilePath: /admin-vite/config/vite-plugins/index.ts
  * @Description: 
  * https://github.com/luzhonglai/admin-vite-vue3
@@ -12,6 +13,7 @@ import vue from '@vitejs/plugin-vue';
 import type { Plugin } from 'vite';
 import { svgPlugins }  from './svgPlugins'
 import { PagesPlugin } from './pages'
+import { ConfigMockPlugin } from './mock'
 import { AutoImportDeps } from './autoImport'
 import { AutoRegistryComponents } from './components'
 import ViteRestart  from 'vite-plugin-restart'
@@ -37,8 +39,10 @@ export function vitePlugins(isBuild: Boolean) {
     AutoImportDeps(),
     // 自动生成路由
     PagesPlugin(),
+    // mock
+    ConfigMockPlugin(isBuild)
     // 配置svg
-    svgPlugins(isBuild)
+    // svgPlugins(isBuild)
   ]
 
   return vitePlugins
