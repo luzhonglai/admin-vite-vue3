@@ -1,3 +1,16 @@
+<!--
+ * @Author: luzhonglai
+ * @Date: 2022-02-20 01:13:52
+ * @LastEditors: luzhonglai
+ * @LastEditTime: 2022-02-20 02:21:46
+ * @FilePath: /admin-vite/docs/admin.md
+ * @Description: 
+ * https://github.com/luzhonglai/admin-vite-vue3
+-->
+
+
+
+
 # admin-vite-vue
 
 > vue3 全家桶最前沿技术 Vue 3 + Typescript + Vite + Pinia + Taiwindcss
@@ -61,3 +74,5 @@
 ### 最后最后 求 Star
 
 如果觉得还不错的话，就给个 Star 支持一下 🍺 ~
+
+

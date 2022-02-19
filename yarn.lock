@@ -344,21 +344,6 @@
   resolved "https://registry.npmmirror.com/@vue/shared/-/shared-3.2.30.tgz"
   integrity sha512-B3HouBtUxcfu2w2d+VhdLcVBXKYYhXiFMAfQ+hoe8NUhKkPRkWDIqhpuehCZxVQ3S2dN1P1WfKGlxGC+pfmxGg==
 
-"@vueuse/core@^7.6.2":
-  version "7.6.2"
-  resolved "https://registry.npmmirror.com/@vueuse/core/-/core-7.6.2.tgz"
-  integrity sha512-bjAbXJVJO6aElMaZtDz2B70C0L6jFk/jGVqJxWZS5huffxA6dW5DN6tQQJwzOnx9B9rDhePHJIFKsix0qZIH2Q==
-  dependencies:
-    "@vueuse/shared" "7.6.2"
-    vue-demi "*"
-
-"@vueuse/shared@7.6.2":
-  version "7.6.2"
-  resolved "https://registry.npmmirror.com/@vueuse/shared/-/shared-7.6.2.tgz"
-  integrity sha512-ThDld4Mx501tahRuHV6qJGkwCr17GknZrOzlD02Na9qJcH7Pq0quNTLx5cNDou7b1CKNvE3BXi2w/hz9KuPNTQ==
-  dependencies:
-    vue-demi "*"
-
 acorn-node@^1.6.1:
   version "1.8.2"
   resolved "https://registry.npmmirror.com/acorn-node/-/acorn-node-1.8.2.tgz"
@@ -3179,6 +3164,13 @@ vite-plugin-pages@^0.20.2:
     json5 "^2.2.0"
     local-pkg "^0.4.1"
     yaml "^2.0.0-10"
+
+vite-plugin-restart@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-restart/-/vite-plugin-restart-0.1.1.tgz#2a926442d9ba675f2a29477c113f53bf464da02d"
+  integrity sha512-kBxOqRrdbjVmC0PiT2KNXZogpgqA2epMkny//VjWnOS2k9NV/vXA7PYgf8/1lmBCZsC+iMj1C1ODuAR/9Sig4A==
+  dependencies:
+    micromatch "^4.0.4"
 
 vite-plugin-svg-icons@^2.0.1:
   version "2.0.1"
