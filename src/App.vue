@@ -7,8 +7,7 @@
  * @FilePath: /admin-vite/src/App.vue
 -->
 <script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-import { getCurrentInstance, onMounted  } from 'vue'
+// 获取全局方法
 const {
   proxy: { $echarts }
 }: any = getCurrentInstance() 
