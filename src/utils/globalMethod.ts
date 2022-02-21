@@ -8,7 +8,7 @@
  */
 import * as echarts from 'echarts'
 /**
- * 
+ *
  * @description: 注册vue全局方法插件
  * @param {*}
  * @return {*}
@@ -16,8 +16,12 @@ import * as echarts from 'echarts'
 
 export const VueGlobalMethods = (app) => {
   return {
-    install: (app,options) => {
-    console.log("🚀 ~ file: GlobalMethod.ts ~ line 20 ~ VueGlobalMethods ~ app,options", app,options)
+    install: (app, options) => {
+      console.log(
+        '🚀 ~ file: GlobalMethod.ts ~ line 20 ~ VueGlobalMethods ~ app,options',
+        app,
+        options,
+      )
       app.config.globalProperties.$echarts = echarts
     },
   }

@@ -1,9 +1,27 @@
+<!--
+ * @Author: luzhonglai
+ * @Date: 2022-02-10 00:57:59
+ * @LastEditors: luzhonglai
+ * @LastEditTime: 2022-02-21 00:12:14
+ * @FilePath: /admin-vite/src/components/HelloWorld.vue
+ * @Description: 
+ * https://github.com/luzhonglai/admin-vite-vue3
+-->
+
 <script setup lang="ts">
-import { ref } from 'vue'
+  import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
+  const props = defineProps<{
+    msg?: string
+    bar?: number
+  }>()
 
-const count = ref(0)
+  const emit = defineEmits<{
+    (e: 'change', id: number): void
+    (e: 'update', value: string): void
+  }>()
+
+  const count = ref(0)
 </script>
 
 <template>
@@ -32,19 +50,19 @@ const count = ref(0)
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
-}
+  a {
+    color: #42b983;
+  }
 
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
+  label {
+    margin: 0 0.5em;
+    font-weight: bold;
+  }
 
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
-}
+  code {
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #304455;
+  }
 </style>
