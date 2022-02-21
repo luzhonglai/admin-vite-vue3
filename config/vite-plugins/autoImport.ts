@@ -4,7 +4,7 @@
  * @LastEditors: luzhonglai
  * @LastEditTime: 2022-02-20 03:09:10
  * @FilePath: /admin-vite/config/vite-plugins/autoImport.ts
- * @Description: 
+ * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
  */
 
@@ -12,11 +12,11 @@
  * @name AutoImportDeps
  * @description 按需加载，自动引入
  */
- import AutoImport from 'unplugin-auto-import/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 
- export const AutoImportDeps = () => {
-     return AutoImport({
-         dts: 'src/auto-imports.d.ts',
-         imports: ['vue', 'pinia', 'vue-router'],
-     })
- }
+export const AutoImportDeps = () => {
+  return AutoImport({
+    dts: 'src/auto-imports.d.ts',
+    imports: ['vue', 'pinia', 'vue-router'],
+  })
+}

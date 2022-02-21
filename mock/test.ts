@@ -4,10 +4,9 @@
  * @LastEditors: luzhonglai
  * @LastEditTime: 2022-02-20 02:54:27
  * @FilePath: /admin-vite/mock/test.ts
- * @Description: 
+ * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
  */
-
 
 import { MockMethod } from 'vite-plugin-mock'
 export default [
