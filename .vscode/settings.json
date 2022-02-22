@@ -1,5 +1,7 @@
 {
-  "cSpell.words": ["vue"],
+  "cSpell.words": [
+    "vue"
+  ],
   "fileheader.customMade": {
     "Author": "luzhonglai", // 创建文件的作者
     "Date": "Do not edit", // 文件创建时间(不变)
@@ -22,5 +24,38 @@
     "description": "", // 函数注释生成之后，光标移动到这里
     "param": "", // param 开启函数参数自动提取 需要将光标放在函数行或者函数上方的空白行
     "return": "",
+  },
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "vue",
+    "javascript",
+    "javascriptreact",
+    "html",
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.options": {
+    "overrideConfig": {
+      "env": {
+        "browser": true,
+        "es6": true
+      },
+      "parserOptions": {
+        "ecmaVersion": 2019,
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "rules": {
+        "no-debugger": "off"
+      }
+    }
   }
 }

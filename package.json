@@ -44,7 +44,8 @@
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-pages": "^0.20.2",
     "vite-plugin-restart": "^0.1.1",
-    "vue-tsc": "^0.29.8"
+    "vue-tsc": "^0.29.8",
+    "web-storage-cache": "^1.1.1"
   },
   "husky": {
     "hooks": {

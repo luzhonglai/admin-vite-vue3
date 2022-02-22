@@ -2,7 +2,7 @@
  * @Author: luzhonglai
  * @Date: 2022-02-20 23:11:38
  * @LastEditors: luzhonglai
- * @LastEditTime: 2022-02-21 22:42:24
+ * @LastEditTime: 2022-02-23 00:57:09
  * @FilePath: /admin-vite/src/pages/test.vue
  * @Description: 
  * https://github.com/luzhonglai/admin-vite-vue3
@@ -19,12 +19,16 @@
 
 <script setup lang="ts">
   const {
-    proxy: { $echarts },
+    proxy: { $echarts, $cache },
   } = getCurrentInstance()
   const router = useRouter()
   const route = useRoute()
+  const addsadsads = 11
 
-
+  
+  console.log("🚀 ~ file: test.vue ~ line 25 ~ router", router)
+  console.log("🚀 ~ file: test.vue ~ line 26 ~ route", route)
+  console.log("🚀 ~ file: test.vue ~ line 24 ~ $cache", $cache)
   console.log('🚀 ~ file: test.vue ~ line 19 ~ proxy',  $echarts)
 
   const initEcharts = () => {
@@ -50,6 +54,8 @@
   onMounted(() => {
     initEcharts()
   })
+
+  
 </script>
 
 <style lang="less" scoped>
