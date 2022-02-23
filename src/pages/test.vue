@@ -2,7 +2,7 @@
  * @Author: luzhonglai
  * @Date: 2022-02-20 23:11:38
  * @LastEditors: luzhonglai
- * @LastEditTime: 2022-02-23 00:57:09
+ * @LastEditTime: 2022-02-23 09:23:22
  * @FilePath: /admin-vite/src/pages/test.vue
  * @Description: 
  * https://github.com/luzhonglai/admin-vite-vue3
@@ -12,7 +12,7 @@
   <!-- 测试 echarts -->
   <div id="box"></div>
   <!-- 测试按需引入 组件 -->
-  <HelloWorld></HelloWorld>
+  <HelloWorld />
   <!-- 测试taiwindcss  -->
   <div class="flex w-36 h-36 m-auto items-center">欢迎学习vue3 script setup pinia</div>
 </template>
@@ -23,13 +23,11 @@
   } = getCurrentInstance()
   const router = useRouter()
   const route = useRoute()
-  const addsadsads = 11
 
-  
-  console.log("🚀 ~ file: test.vue ~ line 25 ~ router", router)
-  console.log("🚀 ~ file: test.vue ~ line 26 ~ route", route)
-  console.log("🚀 ~ file: test.vue ~ line 24 ~ $cache", $cache)
-  console.log('🚀 ~ file: test.vue ~ line 19 ~ proxy',  $echarts)
+  console.log('🚀 ~ file: test.vue ~ line 25 ~ router', router)
+  console.log('🚀 ~ file: test.vue ~ line 26 ~ route', route)
+  console.log('🚀 ~ file: test.vue ~ line 24 ~ $cache', $cache)
+  console.log('🚀 ~ file: test.vue ~ line 19 ~ proxy', $echarts)
 
   const initEcharts = () => {
     const myEcharts = $echarts.init(document.getElementById('box'))
@@ -54,8 +52,6 @@
   onMounted(() => {
     initEcharts()
   })
-
-  
 </script>
 
 <style lang="less" scoped>

@@ -1,14 +1,3 @@
-/*
- * @Author: luzhonglai
- * @Date: 2022-02-21 01:02:43
- * @LastEditors: luzhonglai
- * @LastEditTime: 2022-02-23 00:59:50
- * @FilePath: /admin-vite/.eslintrc.js
- * @Description: 
- * https://github.com/luzhonglai/admin-vite-vue3
- */
-
-// @ts-check
 const { defineConfig } = require('eslint-define-config')
 module.exports = defineConfig({
   root: true,
@@ -23,7 +12,6 @@ module.exports = defineConfig({
     ecmaVersion: 2020,
     sourceType: 'module',
     jsxPragma: 'React',
-
   },
   extends: [
     'plugin:vue/vue3-recommended',
@@ -33,7 +21,7 @@ module.exports = defineConfig({
   ],
   rules: {
     'vue/script-setup-uses-vars': 'error',
-    'prettier/prettier': ['error', { endOfLine: 'off' }],
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
