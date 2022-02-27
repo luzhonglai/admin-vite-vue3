@@ -1,3 +1,4 @@
+
 # admin-vite-vue
 
 > vue3 全家桶最前沿技术 Vue 3 + Typescript + Vite + Pinia + Taiwindcss
@@ -18,7 +19,7 @@
 ```
 ├── config
 │   ├── vite-pugins      // vite配置
-|   └── themeConfig      // 主题配置
+|   └── index            // 主题配置
 ├── docs                 // 文档相关
 ├── mock                 // mock数据
 |-- public
@@ -26,6 +27,7 @@
 │    ├── api             // api请求
 │    ├── assets          // 静态文件
 │    ├── components      // 业务通用组件
+|    |-- directives      // 自定义v-指令
 |    |-- hooks           // 业务逻辑通用
 │    ├── pages           // 业务页面
 │    ├── router          // 路由文件
@@ -43,7 +45,7 @@
 
 - 🖼️ 支持 svg 图标，已封装一个简单的 SvgIcon 组件，可以直接读取文件下的 svg
 
-- 📦 支持 axios(ts 版),已封装了主流的拦截器，请求调用等方法
+- 📦 支持 axios(ts 版),已封装了主流的拦截器，请求调用等方法、日志窗口工具🔧
 
 - 👽 支持 router,store 模块化，内置生成路由钩子
 

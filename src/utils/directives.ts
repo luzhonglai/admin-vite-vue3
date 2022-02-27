@@ -4,7 +4,7 @@
  * @LastEditors: luzhonglai
  * @LastEditTime: 2022-02-22 09:49:25
  * @FilePath: /admin-vite/src/plugins/directives.ts
- * @Description: 
+ * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
  */
 

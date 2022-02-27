@@ -4,7 +4,7 @@
  * @LastEditors: luzhonglai
  * @LastEditTime: 2022-02-23 00:25:12
  * @FilePath: /admin-vite/src/store/user.ts
- * @Description: 
+ * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
  */
 import { defineStore } from 'pinia'
@@ -13,7 +13,7 @@ export const userStore = defineStore({
   id: '111',
   state: () => ({
     count: 'rare',
-    buttonPermissions:[]
+    buttonPermissions: [],
   }),
   actions: {
     setCount() {

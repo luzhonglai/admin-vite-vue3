@@ -4,7 +4,7 @@
  * @Author: ZhongLai Lu
  * @Date: 2021-02-16 18:25:50
  * @LastEditors: luzhonglai
- * @LastEditTime: 2022-02-23 00:26:24
+ * @LastEditTime: 2022-02-28 00:49:13
  */
 
 import config from '../../../config/index'
@@ -33,6 +33,7 @@ const axiosConfig: ConfigOptions = {
    * 接口成功返回状态码
    */
   resultCode: '1',
+  API_AUTH_STATUS: [403, 70000001, 70000003],
   requestTimeout: 5000,
 
   /**
@@ -44,7 +45,7 @@ const axiosConfig: ConfigOptions = {
   /**
    * api请基础配置
    */
-  ...config
+  ...config,
 }
 
 export default axiosConfig
