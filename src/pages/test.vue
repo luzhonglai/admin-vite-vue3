@@ -2,8 +2,8 @@
  * @Author: luzhonglai
  * @Date: 2022-02-20 23:11:38
  * @LastEditors: luzhonglai
- * @LastEditTime: 2022-02-28 01:17:33
- * @FilePath: /admin-vite/src/page/test.vue
+ * @LastEditTime: 2022-02-28 01:44:21
+ * @FilePath: /admin-vite/src/pages/test.vue
  * @Description: 
  * https://github.com/luzhonglai/admin-vite-vue3
 -->
@@ -24,7 +24,7 @@
   ])
 
   $http
-    .get('addd/api/add', {})
+    .get('/addd/api/add', {})
     .then((res) => {})
     .catch((err) => err)
 
