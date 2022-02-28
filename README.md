@@ -1,20 +1,42 @@
-
 # admin-vite-vue
 
-> vue3 全家桶最前沿技术 Vue 3 + Typescript + Vite + Pinia + Taiwindcss
+> vue3 全家桶Vue 3 + Typescript + Vite + Pinia + Taiwind CSS + ElementPlus 后台管理模版
 
 模板应该可以帮助你开始使用 Vue 3 和 Vite 中的 Typescript 进行开发。模板使用 Vue 3 ' <脚本设置> ' sfc，查看[脚本设置文档](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup)了解更多
 
 ### Vscode 插件
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-- [Vite 项目调试工具 🔧](https://marketplace.visualstudio.com/items?itemName=antfu.vite)
+- [Vite 项目调试工具](https://marketplace.visualstudio.com/items?itemName=antfu.vite)
 - Vue 3 Snippets
 - Prettier Eslint
 - Prettier - Code formatter
-- 🎉 持续添加中.... 🀄️🀄️
+- 🎉 持续添加中.... 
+### 项目特点
 
-### 项目解构
+- 🖼️ 支持 svg 图标，已封装一个简单的 SvgIcon 组件，可以直接读取文件下的 svg
+
+- 📦 支持 axios(ts 版),已封装了主流的拦截器，请求调用等方法、日志窗口工具🔧
+
+- 👽 支持 router,store 模块化，内置生成路由钩子
+
+- 🐳 支持 env，环境变量和区分打包环境
+  - dev
+  - test
+  - prod
+
+- 🍡 支持 unplugin-vue-components 组件自动引入
+
+- 🥘 支持 vite-plugin-pages 根据文件自动生成路由的插件
+
+- 🚌 支持 unplugin-auto-import 按需加载自动导入
+
+### 功能清单
++ Auth 登录
++ 动态菜单管理
+
+
+### 项目目录
 
 ```
 ├── config
@@ -41,25 +63,23 @@
 └── vite.config.ts       // vite全局配置
 ```
 
-### 特点
+### 快速开始
+```bash
+# git 
 
-- 🖼️ 支持 svg 图标，已封装一个简单的 SvgIcon 组件，可以直接读取文件下的 svg
+#yarn
+yarn install
 
-- 📦 支持 axios(ts 版),已封装了主流的拦截器，请求调用等方法、日志窗口工具🔧
+#运行
+yarn run dev
 
-- 👽 支持 router,store 模块化，内置生成路由钩子
+# npm
+npm install
 
-- 🐳 支持 env，环境变量和区分打包环境
+# 运行
+npm run dev
+```
 
-- 🍡 支持 unplugin-vue-components 组件自动引入
-
-- 🥘 支持 vite-plugin-pages 根据文件自动生成路由的插件
-
-- 🪲 支持 vite-plugin-restart 根据监听 config.ts 文件刷新 vite 服务
-
-- 🚌 支持 unplugin-auto-import 按需加载自动导入
-
-
-### 最后最后 求 Star
+### 最后的期待
 
 如果觉得还不错的话，就给个 Star 支持一下 🍺 ~
