@@ -1,10 +1,11 @@
 /*
- * @Author: your name
- * @Date: 2022-02-16 01:09:24
- * @LastEditTime: 2022-02-28 01:25:25
+ * @Author: luzhonglai
+ * @Date: 2022-02-20 02:31:52
  * @LastEditors: luzhonglai
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @LastEditTime: 2022-03-17 15:23:45
  * @FilePath: /admin-vite/vite.config.ts
+ * @Description:
+ * https://github.com/luzhonglai/admin-vite-vue3
  */
 import path from 'path'
 import { ConfigEnv, defineConfig } from 'vite'
@@ -40,10 +41,10 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
       cors: false, // 类型： boolean | CorsOptions 为开发服务器配置 CORS。默认启用并允许任何源
       host: '0.0.0.0', // IP配置，支持从IP启动
       proxy: {
-        [envAxios[mode].baseApi]: {
+        [envAxios[mode].baseURL]: {
           target: envAxios[mode].target,
           changeOrigin: true,
-          rewrite: (path) => path.replace(new RegExp(`^${API_BASE_URL}`), ''),
+          rewrite: (path) => path.replace(new RegExp(`^${envAxios[mode].baseURL}`), ''),
         },
       },
     },
