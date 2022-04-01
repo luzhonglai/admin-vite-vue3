@@ -2,7 +2,7 @@
  * @Author: luzhonglai
  * @Date: 2022-02-20 02:31:52
  * @LastEditors: luzhonglai
- * @LastEditTime: 2022-03-17 15:23:45
+ * @LastEditTime: 2022-03-29 11:32:46
  * @FilePath: /admin-vite/vite.config.ts
  * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
@@ -17,15 +17,15 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
   const isBuild = command === 'build'
   return {
     plugins: vitePlugins(isBuild),
-    resolve: {
-      css: {
-        preprocessorOptions: {
-          scss: {
-            // 全局scss css 变量引入
-            additionalData: '@import "@/styles/main.scss";',
-          },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          // 全局scss css 变量引入
+          additionalData: '@import "./src/styles/sider.scss";',
         },
       },
+    },
+    resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
         '@config': path.resolve(__dirname, './config'),

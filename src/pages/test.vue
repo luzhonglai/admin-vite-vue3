@@ -2,21 +2,28 @@
  * @Author: luzhonglai
  * @Date: 2022-02-20 23:11:38
  * @LastEditors: luzhonglai
- * @LastEditTime: 2022-02-28 01:44:21
+ * @LastEditTime: 2022-04-01 17:29:56
  * @FilePath: /admin-vite/src/pages/test.vue
  * @Description: 
  * https://github.com/luzhonglai/admin-vite-vue3
 -->
-<script setup lang="ts" name="test">
+<route>
+{
+  name: "test-override",
+  meta: {requiresAuth: false}
+}
+</route>
+
+<script setup lang="ts">
   import { Search, Edit, Check, Message, Star, Delete } from '@element-plus/icons-vue'
-  import { userStore } from '@/store'
+  // import { userStore } from '@/store'
   const {
     proxy: { $echarts, $cache, $http },
   } = getCurrentInstance()
   const router = useRouter()
   const route = useRoute()
   // pinia userState
-  const userState = userStore()
+  // const userState = userStore()
 
   const table = ref([
     { id: '1', name: 'rare' },
@@ -28,7 +35,7 @@
     .then((res) => {})
     .catch((err) => err)
 
-  console.log('🚀 ~ file: test.vue ~ line 28 ~ userState', userState.count)
+  // console.log('🚀 ~ file: test.vue ~ line 28 ~ userState', userState.count)
   console.log('🚀 ~ file: test.vue ~ line 25 ~ router', router)
   console.log('🚀 ~ file: test.vue ~ line 26 ~ route', route)
   console.log('🚀 ~ file: test.vue ~ line 24 ~ $cache', $cache)
@@ -60,6 +67,7 @@
 </script>
 
 <template>
+  <div class="title">asdasdsadasdsa1212</div>
   <!-- 测试 echarts -->
   <div id="box"></div>
   <!-- 测试按需引入 组件 -->
@@ -110,9 +118,12 @@
   </el-row>
 </template>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   #box {
     width: 600px;
     height: 600px;
+  }
+  .title {
+    color: $yellow;
   }
 </style>
