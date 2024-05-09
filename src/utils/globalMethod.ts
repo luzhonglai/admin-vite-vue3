@@ -17,7 +17,7 @@ import http from '@/utils/axios'
  */
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const VueGlobalMethods = (app?: object = {}) => {
+export const setupGlobalMethods = (app?: object = {}) => {
   return {
     install: (app) => {
       app.config.globalProperties.$echarts = echarts

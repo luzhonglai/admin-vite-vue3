@@ -4,15 +4,17 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import router from './router'
 import { setupGlobalDirective } from '@/directives'
+import { setupGlobalMethods } from '@/utils/globalMethod'
 
-// 挂在全局方法插件
-import { VueGlobalMethods } from '@/utils/globalMethod'
+
 import '@/styles/index.scss'
 const app = createApp(App)
 
-app.use(createPinia()).use(router).use(VueGlobalMethods())
+app.use(createPinia()).use(router)
 
-// 挂在指令
+// directive
 setupGlobalDirective(app)
+// methods （axios echarts cache）
+setupGlobalMethods(app)
 
 app.mount('#app')
