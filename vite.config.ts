@@ -37,9 +37,8 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
     server: {
       hmr: { overlay: false }, // 禁用或配置 HMR 连接 设置 server.hmr.overlay 为 false 可以禁用服务器错误遮罩层
       port: 4000,
-      open: false,
-      cors: false, // 类型： boolean | CorsOptions 为开发服务器配置 CORS。默认启用并允许任何源
-      host: '0.0.0.0', // IP配置，支持从IP启动
+      open: true,
+      cors: true, // 类型： boolean | CorsOptions 为开发服务器配置 CORS。默认启用并允许任何源
       proxy: {
         [envAxios[mode].baseURL]: {
           target: envAxios[mode].target,

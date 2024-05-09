@@ -1,9 +1,9 @@
 <!--
  * @Author: luzhonglai
  * @Date: 2022-02-20 23:11:38
- * @LastEditors: luzhonglai
- * @LastEditTime: 2022-04-01 17:29:56
- * @FilePath: /admin-vite/src/pages/test.vue
+ * @LastEditors: luzhonglai 1342341673@qq.com
+ * @LastEditTime: 2024-05-10 02:47:25
+ * @FilePath: \admin-vite-vue3\src\pages\test.vue
  * @Description: 
  * https://github.com/luzhonglai/admin-vite-vue3
 -->
@@ -15,15 +15,16 @@
 </route>
 
 <script setup lang="ts">
-  import { Search, Edit, Check, Message, Star, Delete } from '@element-plus/icons-vue'
-  // import { userStore } from '@/store'
+  import { userStore } from '@/store'
   const {
     proxy: { $echarts, $cache, $http },
   } = getCurrentInstance()
+  
+
   const router = useRouter()
   const route = useRoute()
-  // pinia userState
-  // const userState = userStore()
+
+  const userState = userStore()
 
   const table = ref([
     { id: '1', name: 'rare' },
@@ -32,8 +33,10 @@
 
   $http
     .get('/addd/api/add', {})
-    .then((res) => {})
-    .catch((err) => err)
+    .then(() => {})
+    .catch((err: any) => {
+      //  Message.error(err.message)
+     })
 
   // console.log('🚀 ~ file: test.vue ~ line 28 ~ userState', userState.count)
   console.log('🚀 ~ file: test.vue ~ line 25 ~ router', router)
