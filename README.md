@@ -1,3 +1,10 @@
+<!--
+ * @Date: 2024-05-10 01:16:05
+ * @LastEditors: luzhonglai 1342341673@qq.com
+ * @LastEditTime: 2024-05-10 02:46:14
+ * @FilePath: \admin-vite-vue3\README.md
+-->
+
 # admin-vite-vue
 
 > vue3 全家桶Vue 3 + Typescript + Vite + Pinia + Taiwind CSS + ElementPlus 后台管理模版
@@ -82,4 +89,4 @@ npm run dev
 
 ### 最后的期待
 
- Star 支持一下 🍺 ~
+ Star !!!!!
