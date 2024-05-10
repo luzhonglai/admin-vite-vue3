@@ -1,9 +1,9 @@
 /*
  * @Author: luzhonglai
  * @Date: 2022-02-17 01:17:26
- * @LastEditors: luzhonglai
- * @LastEditTime: 2022-02-28 01:30:47
- * @FilePath: /admin-vite/config/index.ts
+ * @LastEditors: luzhonglai 1342341673@qq.com
+ * @LastEditTime: 2024-05-11 02:32:25
+ * @FilePath: \admin-vite-vue3\config\index.ts
  * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
  */
@@ -11,7 +11,7 @@
 const mode = import.meta.env?.MODE
 console.log('🚀 ~ file: index.ts ~ line 12 ~ mode', mode)
 
-export const envAxios: object = {
+export const envAxios: any = {
   dev: {
     baseURL: '/dev',
     target: 'http://jsonplaceholder.typicode.com',

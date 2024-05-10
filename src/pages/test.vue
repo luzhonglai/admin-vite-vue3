@@ -2,15 +2,14 @@
  * @Author: luzhonglai
  * @Date: 2022-02-20 23:11:38
  * @LastEditors: luzhonglai 1342341673@qq.com
- * @LastEditTime: 2024-05-10 02:47:25
+ * @LastEditTime: 2024-05-11 02:38:50
  * @FilePath: \admin-vite-vue3\src\pages\test.vue
  * @Description: 
  * https://github.com/luzhonglai/admin-vite-vue3
 -->
 <route>
 {
-  name: "test-override",
-  meta: {requiresAuth: false}
+  meta: {layout: true}
 }
 </route>
 
@@ -20,7 +19,7 @@
     proxy: { $echarts, $cache, $http },
   } = getCurrentInstance()
   
-
+  debugger
   const router = useRouter()
   const route = useRoute()
 
@@ -32,17 +31,14 @@
   ])
 
   $http
-    .get('/addd/api/add', {})
-    .then(() => {})
+    .get('/dev/comments?postId=1')
+    .then((res: any) => {
+      console.log(res)
+    })
     .catch((err: any) => {
-      //  Message.error(err.message)
+      console.log(err)
      })
 
-  // console.log('🚀 ~ file: test.vue ~ line 28 ~ userState', userState.count)
-  console.log('🚀 ~ file: test.vue ~ line 25 ~ router', router)
-  console.log('🚀 ~ file: test.vue ~ line 26 ~ route', route)
-  console.log('🚀 ~ file: test.vue ~ line 24 ~ $cache', $cache)
-  console.log('🚀 ~ file: test.vue ~ line 19 ~ proxy', $echarts)
 
   const initEcharts = () => {
     const myEcharts = $echarts.init(document.getElementById('box'))
