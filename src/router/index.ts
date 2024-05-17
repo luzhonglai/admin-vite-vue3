@@ -20,11 +20,11 @@ const router = createRouter({
   history: createWebHistory(), // hash history   注意 # 和根/
   routes: [
     {
-      name: 'test1',
-      path: '/test1',
+      name: 'home',
+      path: '/',
       component: () => import('@/pages/test.vue'),
       meta: {
-        title: 'test1',
+        title: 'demo',
       },
     },
   ],

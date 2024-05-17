@@ -1,5 +1,11 @@
-const { defineConfig } = require('eslint-define-config')
-module.exports = defineConfig({
+/*
+ * @Date: 2024-05-10 01:16:05
+ * @LastEditors: luzhonglai 1342341673@qq.com
+ * @LastEditTime: 2024-05-17 18:09:50
+ * @FilePath: \admin-vite-vue3\.eslintrc.js
+ */
+import { defineConfig } from 'eslint-define-config'
+export default defineConfig({
   root: true,
   env: {
     browser: true,

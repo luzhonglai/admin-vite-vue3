@@ -2,7 +2,7 @@
  * @Author: luzhonglai
  * @Date: 2022-02-20 23:11:38
  * @LastEditors: luzhonglai 1342341673@qq.com
- * @LastEditTime: 2024-05-11 02:38:50
+ * @LastEditTime: 2024-05-17 18:08:05
  * @FilePath: \admin-vite-vue3\src\pages\test.vue
  * @Description: 
  * https://github.com/luzhonglai/admin-vite-vue3
@@ -16,10 +16,9 @@
 <script setup lang="ts">
   import { userStore } from '@/store'
   const {
-    proxy: { $echarts, $cache, $http },
+    proxy: { $echarts, $http },
   } = getCurrentInstance()
-  
-  debugger
+
   const router = useRouter()
   const route = useRoute()
 
@@ -37,8 +36,7 @@
     })
     .catch((err: any) => {
       console.log(err)
-     })
-
+    })
 
   const initEcharts = () => {
     const myEcharts = $echarts.init(document.getElementById('box'))
