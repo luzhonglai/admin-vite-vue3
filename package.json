@@ -21,6 +21,7 @@
     "husky": "^7.0.4",
     "mockjs": "^1.1.0",
     "path": "^0.12.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "process": "^0.11.10",
     "scss": "^0.2.4",
     "vite-plugin-svg-icons": "^2.0.1",

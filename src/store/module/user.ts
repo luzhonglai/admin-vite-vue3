@@ -1,9 +1,9 @@
 /*
  * @Author: luzhonglai
  * @Date: 2022-02-16 01:09:24
- * @LastEditors: luzhonglai
- * @LastEditTime: 2022-03-29 14:52:58
- * @FilePath: /admin-vite/src/store/module/user.ts
+ * @LastEditors: luzhonglai 1342341673@qq.com
+ * @LastEditTime: 2024-05-17 22:48:21
+ * @FilePath: \admin-vite-vue3\src\store\module\user.ts
  * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
  */
@@ -25,11 +25,9 @@ export const userStore = defineStore({
       opened: false,
       withoutAnimation: false,
     },
-    settings: {
-      showSidebarLogo: false,
-    },
     language: 'asdsa',
     size: 'medium',
+    count: '',
   }),
   actions: {
     setCount() {
