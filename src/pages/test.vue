@@ -2,7 +2,7 @@
  * @Author: luzhonglai
  * @Date: 2022-02-20 23:11:38
  * @LastEditors: luzhonglai 1342341673@qq.com
- * @LastEditTime: 2024-05-17 18:08:05
+ * @LastEditTime: 2024-05-17 23:13:39
  * @FilePath: \admin-vite-vue3\src\pages\test.vue
  * @Description: 
  * https://github.com/luzhonglai/admin-vite-vue3
@@ -14,7 +14,7 @@
 </route>
 
 <script setup lang="ts">
-  import { userStore } from '@/store'
+  import { userStore } from '@/store/module/user'
   const {
     proxy: { $echarts, $http },
   } = getCurrentInstance()
@@ -23,6 +23,7 @@
   const route = useRoute()
 
   const userState = userStore()
+  console.log(userState, 11)
 
   const table = ref([
     { id: '1', name: 'rare' },

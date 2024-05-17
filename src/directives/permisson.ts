@@ -1,14 +1,14 @@
 /*
  * @Author: luzhonglai
  * @Date: 2022-02-22 09:49:44
- * @LastEditors: luzhonglai
- * @LastEditTime: 2022-02-24 10:03:58
- * @FilePath: /admin-vite/src/directives/permisson.ts
+ * @LastEditors: luzhonglai 1342341673@qq.com
+ * @LastEditTime: 2024-05-17 23:14:14
+ * @FilePath: \admin-vite-vue3\src\directives\permisson.ts
  * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
  */
 
-import { userStore } from '@/store'
+import { userStore } from '@/store/module/user'
 
 /**
  * @name: 按钮指令
