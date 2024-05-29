@@ -2,7 +2,7 @@
  * @Author: luzhonglai
  * @Date: 2022-02-22 09:49:44
  * @LastEditors: luzhonglai 1342341673@qq.com
- * @LastEditTime: 2024-05-17 23:14:14
+ * @LastEditTime: 2024-05-18 14:03:08
  * @FilePath: \admin-vite-vue3\src\directives\permisson.ts
  * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
@@ -16,7 +16,7 @@ import { userStore } from '@/store/module/user'
  */
 export default {
   mounted(el: Element, binding: any) {
-    const buttonPermissions: [] = userStore().buttonPermissions
+    const buttonPermissions = userStore().buttonPermissions
     const { value } = binding
 
     if (value && value instanceof Array && value.length > 0) {

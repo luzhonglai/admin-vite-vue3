@@ -3,7 +3,7 @@ import { setupLayouts } from 'virtual:setupRouter'
  * @Author: luzhonglai
  * @Date: 2022-02-16 01:09:24
  * @LastEditors: luzhonglai 1342341673@qq.com
- * @LastEditTime: 2024-05-11 02:27:15
+ * @LastEditTime: 2024-05-30 01:46:44
  * @FilePath: \admin-vite-vue3\src\router\index.ts
  * @Description:
  * https://github.com/luzhonglai/admin-vite-vue3
@@ -25,6 +25,14 @@ const router = createRouter({
       component: () => import('@/pages/test.vue'),
       meta: {
         title: 'demo',
+      },
+    },
+    {
+      name: 'time',
+      path: '/time',
+      component: () => import('@/pages/time/time.vue'),
+      meta: {
+        title: 'time',
       },
     },
   ],
